@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #1a1a2e 0%, #f4a261 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #1a1a2e;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+button {
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+a {
+    transition: color 0.2s ease;
+}
+
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(26, 26, 46, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(26, 26, 46, 0.4);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(26, 26, 46, 0.6);
+}
+
+
+/* ============================================================
+   DARK MODE — applies to the whole site
+   ============================================================ */
+
+
+/* Body background becomes dark */
+
+body.dark-mode {
+    background: linear-gradient(135deg, #0a0a14 0%, #2a1a0e 100%) !important;
+    color: #e5e5e5;
+}
+
+body.dark-mode * {
+    border-color: #2a2a3e !important;
+}
+
+
+/* ---------- TEXT ---------- */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ffffff !important;
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label,
+body.dark-mode li,
+body.dark-mode div {
+    color: #d5d5d5;
+}
+
+
+/* Explicit text color for things that had dark colors */
+
+body.dark-mode strong,
+body.dark-mode b {
+    color: #ffffff !important;
+}
+
+
+/* ---------- CARDS / CONTAINERS ---------- */
+
+
+/* Any white background div becomes dark */
+
+body.dark-mode div[style*="background: white"],
+body.dark-mode div[style*='background: "white"'],
+body.dark-mode div[style*="background: rgb(255, 255, 255)"] {
+    background: #1a1a2e !important;
+    color: #e5e5e5 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode div[style*="background: #f8f9fa"],
+body.dark-mode div[style*="background: #fafafa"],
+body.dark-mode div[style*="background: #f7f7f7"] {
+    background: #202038 !important;
+}
+
+
+/* ---------- FORMS ---------- */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #202038 !important;
+    color: #ffffff !important;
+    border-color: #3a3a4e !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #888 !important;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+body.dark-mode button {
+    color: inherit;
+}
+
+
+/* Primary buttons (dark navy) stay legible */
+
+body.dark-mode button[style*="background: #1a1a2e"],
+body.dark-mode button[style*="background: rgb(26, 26, 46)"] {
+    background: #4a4a6e !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------- LINKS ---------- */
+
+body.dark-mode a {
+    color: #f4a261;
+}
+
+
+/* ---------- GRADIENT HERO HEADERS ---------- */
+
+
+/* Section headings that were on gradient — keep white */
+
+body.dark-mode h1[style*="color: white"],
+body.dark-mode h2[style*="color: white"] {
+    color: #ffffff !important;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+body.dark-mode footer {
+    background: linear-gradient(135deg, #0a0a14 0%, #2a1a0e 100%) !important;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+body.dark-mode nav {
+    background: #0f0f1a !important;
+    border-bottom-color: #2a2a3e !important;
+}
+
+
+/* ---------- HOME PAGE HERO ---------- */
+
+
+/* The hero banner has a gradient — keep it subtle in dark mode */
+
+body.dark-mode section,
+body.dark-mode section[style*="background: transparent"] {
+    background: transparent !important;
+}
+
+
+/* Home hero section — dark navy to deep orange */
+
+body.dark-mode div[style*="linear-gradient(135deg, #1a1a2e 0%, #f4a261 100%)"] {
+    background: linear-gradient(135deg, #0a0a14 0%, #3d2914 100%) !important;
+}
+
+
+/* "What We Offer" and similar section headers — white text in dark mode */
+
+body.dark-mode h2[style*="color: white"],
+body.dark-mode p[style*="color: white"],
+body.dark-mode h1[style*="color: white"] {
+    color: #ffffff !important;
+}
+
+
+/* Book cards on Home page — always dark bg */
+
+body.dark-mode div[style*="border: 1px solid #eee"] {
+    background: #1a1a2e !important;
+    border-color: #2a2a3e !important;
+}
